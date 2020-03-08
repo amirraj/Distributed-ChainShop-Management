@@ -1,0 +1,43 @@
+set serveroutput on;
+set verify off;
+
+declare
+	
+	
+	name varchar2(30) := '&name;;
+	id number := &id ;
+			
+begin
+	addEmp(id,name);
+end;
+/
+
+
+set serveroutput on;
+set verify off;
+
+declare
+	
+	
+	id number := &id ;
+			
+begin
+	removeEmp(id);
+end;
+/
+
+set serveroutput on;
+set verify off;
+
+declare
+	
+	
+	top_pname varchar2(30);
+			
+begin
+	top_pname := get_top_grossing_product(1);
+	
+	
+	dbms_output.put_line('Top Selling Product: '||top_pname);
+end;
+/
